@@ -1,0 +1,325 @@
+body {
+    background-color:white;
+}
+
+* {
+    line-height: 110%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.navbar1 {
+
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    align-items: center;
+
+}
+
+.navbar2 {
+    display: none;
+}
+
+.bottomnavbar {
+    visibility: hidden;
+}
+
+.logo {
+    margin-top: 5px;
+
+    width: 180px;
+    height: 50px;
+}
+
+.fa {
+    /* margin-top:-6; */
+    font-size: x-large;
+    color:rgb(53, 189, 240);
+    cursor: pointer;
+}
+
+.cart {
+    text-align: center;
+    cursor: pointer;
+}
+
+.cart::after {
+    /* content: "cart";*/
+    display: block;
+}
+
+.user {
+    text-align: center;
+}
+
+.user::after {
+    /* content: "signup/login";*/
+
+    display: block;
+}
+
+.shoppingbag {
+    text-align: center;
+    cursor: pointer;
+    
+}
+
+.shoppingbag::after {
+    cursor: pointer;
+    
+    display: block;
+}
+
+
+
+.menubar {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    height: 400px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.menubar:hover .dropdown-content {
+    display: block;
+}
+
+.menubar:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+li {
+
+    list-style: none;
+
+}
+
+li a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+
+}
+
+/* slider */
+
+.slider-img-responsive {
+
+    width: 100%;
+    height: 400px;
+}
+
+
+/* footer */
+.footer {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: black;
+    color:rgb(231, 216, 76);
+}
+
+.footer a {
+    text-decoration: none;
+    color: rgb(231, 216, 76);
+}
+
+.follow {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.btn-warning{
+    color: white;
+    background-color: #39395f;
+}
+
+.btn-success{
+    color: white;
+    background-color: #39395f;
+}
+
+.btn-danger{
+    color: white;
+    background-color: #39395f;
+}
+
+.btn-primary{
+    color: white;
+    background-color: #39395f;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 700px) {
+    body {
+        background-color: white;
+
+    }
+
+    .navbar1 {
+        display: none;
+    }
+
+
+    .navbar2 {
+        background-color: black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .logo {
+        margin-top: 10px;
+
+        width: 150px;
+        height: 50px;
+    }
+
+    .menubar {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown a:hover {
+        background-color: #ddd;
+    }
+
+    .show {
+        display: block;
+    }
+
+
+
+    .bottomnavbar {
+        visibility: visible;
+
+        background-color: #060469;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    /* .bottomnavbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }*/
+
+    .fa {
+        /* margin-top: ;*/
+        font-size: x-large;
+        color: rgb(53 180 240);
+    }
+
+    .home {
+        text-align: center;
+    }
+
+    .home::after {
+        /*content: "Home";*/
+        display: block;
+    }
+
+    .search {
+        text-align: center;
+    }
+
+    .search::after {
+        /*content: "Search";*/
+        display: block;
+    }
+
+    .cart {
+        text-align: center;
+
+    }
+
+    .cart::after {
+        /* content: "cart";*/
+        display: block;
+    }
+
+    .user {
+        text-align: center;
+    }
+
+    .user::after {
+        /*content: "signup/login";*/
+
+        display: block;
+    }
+
+    .shoppingbag {
+        text-align: center;
+    }
+
+    .shoppingbag::after {
+        /* content: "Items";*/
+        display: block;
+    }
+
+    .slider-img-responsive {
+
+        width: 100%;
+        height: 150px;
+    }
+
+    .footer {
+        margin-top: 10px;
+        
+        margin-bottom: 55px;
+        background-color: black;
+        color: rgb(231, 216, 76);
+    }
+
+
+
+
+
+}

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <title>ordercancelled</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/shop/css/annapurnabazzarstyle.css' %}">
+
+
+
+</head>
+
+<body>
+
+    <section>
+
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+            <a class="navbar-brand" href="/shop/ownerhome/">
+                <img src="{% static 'shop/images/Annapurnabazzar.png'%}" class="img-fluid" alt="logo"
+                    style="width: 180px; height: 40px;">
+
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/shop/addcategory/">Add Category</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/shop/addsubcategory/">Add Sub Category</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/shop/addproductdetails/">Add Product Details</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/shop/allcategory/">All Category</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/shop/allsubcategory/">All Sub Category</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/shop/allproductdetails/">All Product Details</a>
+                    </li>
+    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Orders
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/shop/ordercancelled/">Cancelled</a>
+                            <a class="dropdown-item" href="/shop/orderreturned/">Returned</a>
+                            <a class="dropdown-item" href="/shop/orderdelivered/">Delivered</a>
+                            <a class="dropdown-item" href="/shop/notdelivered/">Not Delivered</a>
+    
+    
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/shop/allmessages/">Messages</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/shop/ownersearch/"><i class="fa fa-search"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Add Employee</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </section>
+
+    {% for message in messages %}
+    <div class="alert alert-{{message.tags }} alert-dismissible fade show" role="alert">
+        <strong>Message: </strong> {{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+
+    <hr>
+
+
+
+<div>
+    <h4 class="text-center"> Total Cancelled Order: {{count}}</h4>
+</div>
+
+
+
+    {% for list in prods %}
+    <div class="d-flex justify-content-center my-4">
+
+
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+            Items
+        </button>
+
+
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Brand</th>
+                                    <th scope="col">Packet Size</th>
+                                    <th scope="col">Quantity</th>
+                                    <th scope="col">Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for prod in list.1 %}
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>{{prod.name}}</td>
+                                    <td>{{prod.brand}}</td>
+                                    <td>{{prod.size}}</td>
+                                    <td>{{prod.quantity}}</td>
+                                    <td>{{prod.totalprice}}</td>
+                                </tr>
+                                {% endfor %}
+
+                            </tbody>
+                        </table>
+
+
+
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+  
+    <div>
+        <h4 class="text-center">Order Id: <b>{{list.0.order_id}}</b></h4>
+    </div>
+    
+
+
+    <div class="d-flex justify-content-center border-info">
+        <div>
+            <p><b>Total Amount: {{list.0.price}}</b></p>
+            <p><b>Effective Amount: {{list.0.eprice}}</b></p>
+            <p><b>Payment Mode: {{list.0.cashmode}}</b></p>
+            <p>First Name: {{list.0.first_name}}</p>
+            <p>Last Name: {{list.0.last_name}}</p>
+            <p>Address1: {{list.0.address1}}</p>
+            <p>Address2: {{list.0.address2}}</p>
+            <p>Landmark: {{list.0.landmark}}</p>
+            <p>Mobile No.: {{list.0.mobileno}}</p>
+            <p>City: {{list.0.city}}</p>
+            <p>State: {{list.0.state}}</p>
+            <p>Pincode: {{list.0.pincode}}</p>
+            <p><b>Order Placing Date: {{list.0.order_date}}</b></p>
+
+        </div>
+
+
+
+    </div>
+
+
+
+    <div class="d-flex justify-content-around">
+
+        
+        <a href="/shop/handleordercancelled/{{list.0.order_id}}"><button class="btn btn-danger">Delete</button></a>
+    </div>
+
+    <hr>
+    {% endfor %}
+
+
+
+
+
+
+
+</body>
+
+</html>

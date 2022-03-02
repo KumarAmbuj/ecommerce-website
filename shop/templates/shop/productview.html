@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <title>productview</title>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'shop/css/annapurnabazzarstyle.css' %}">
+    <style>
+        /*
+        body {
+            background-color: lightblue;
+        }
+
+        * {
+            line-height: 90%;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .navbar1 {
+
+            display: flex;
+            justify-content: space-around;
+            background-color: #060469;
+            align-items: center;
+
+        }
+
+        .navbar2 {
+            display: none;
+        }
+
+        .bottomnavbar {
+            visibility: hidden;
+        }
+
+        .logo {
+            margin-top: 5px;
+
+            width: 180px;
+            height: 50px;
+        }
+*/
+        /*
+        .fa {
+
+            font-size: x-large;
+            color: rgb(53 180 240);
+            cursor: pointer;
+        }
+
+        .cart {
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .cart::after {
+
+            display: block;
+        }
+
+        .user {
+            text-align: center;
+        }
+
+        .user::after {
+
+
+            display: block;
+        }
+
+        .shoppingbag {
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .shoppingbag::after {
+            cursor: pointer;
+            content: "Items";
+            display: block;
+        }
+
+
+
+        .menubar {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+
+            overflow: scroll;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .menubar:hover .dropdown-content {
+            display: block;
+        }
+
+        .menubar:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+
+        li {
+
+            list-style: none;
+
+        }
+
+        li a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+
+        }
+*/
+        /* slider */
+        /*
+        .slider-img-responsive {
+
+            width: 100%;
+            height: 400px;
+        }
+
+*/
+        /* footer */
+        /*
+        .footer {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background-color: #060469;
+            color: rgb(231, 216, 76);
+        }
+
+        .footer a {
+            text-decoration: none;
+            color: rgb(231, 216, 76);
+        }
+
+        .follow {
+            display: flex;
+            justify-content: space-around;
+        }
+
+
+
+
+
+
+
+        @media only screen and (max-width: 600px) {
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            body {
+                background-color: rgb(220, 231, 235);
+
+            }
+
+
+            .navbar1 {
+                display: none;
+            }
+
+
+            .navbar2 {
+                background-color: #060469;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+            }
+
+            .logo {
+                margin-top: 10px;
+
+                width: 150px;
+                height: 50px;
+            }
+
+            .menubar {
+                position: relative;
+                display: inline-block;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f1f1f1;
+                min-width: 160px;
+                overflow: auto;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+            }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+            .dropdown a:hover {
+                background-color: #ddd;
+            }
+
+            .show {
+                display: block;
+            }
+
+
+
+            .bottomnavbar {
+                visibility: visible;
+
+                background-color: #060469;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+            }
+
+            /* .bottomnavbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+            }*/
+        /*
+            .fa {
+
+                font-size: x-large;
+                color: rgb(53 180 240);
+            }
+
+            .home {
+                text-align: center;
+            }
+
+            .home::after {
+
+                display: block;
+            }
+
+            .search {
+                text-align: center;
+            }
+
+            .search::after {
+
+                display: block;
+            }
+
+            .cart {
+                text-align: center;
+
+            }
+
+            .cart::after {
+
+                display: block;
+            }
+
+            .user {
+                text-align: center;
+            }
+
+            .user::after {
+
+
+                display: block;
+            }
+
+            .shoppingbag {
+                text-align: center;
+            }
+
+            .shoppingbag::after {
+
+                display: block;
+            }
+
+            .slider-img-responsive {
+
+                width: 100%;
+                height: 150px;
+            }
+
+            .footer {
+                margin-top: 10px;
+                ;
+                margin-bottom: 55px;
+                background-color: #060469;
+                color: rgb(231, 216, 76);
+            }
+
+
+
+
+
+        }*/
+    </style>
+</head>
+
+<body>
+    <section>
+        <nav>
+            <div class="container-fluid navbar1">
+
+                <div class="logo">
+                    <img src="{% static 'shop/images/Annapurnabazzar.png'%}" class="img-fluid"
+                            alt="logo">
+                    
+                </div>
+
+                <div class="home">
+                    {% if user.is_authenticated %}
+                    <a href="/shop/shophome/"><i class="fa fa-home"></i></a>
+                    {% else %}
+                    <a href="/shop/"><i class="fa fa-home"></i></a>
+                    {% endif %}
+                </div>
+
+                <div class="myaccount">
+
+                    <i class="fa fa-user-circle" data-toggle="dropdown"></i>
+                    <ul class="dropdown-menu">
+
+                        {% if user.is_authenticated %}
+                        <li><a href="#" class="dropdown-item">My Account</a></li>
+                        <li><a href="/shop/userorder/" class="dropdown-item">My Order</a></li>
+                        
+                        {% else %}
+
+                        
+                        <li><a href="#" class="dropdown-item text-center" data-toggle="modal"
+                                data-target="#loginmodal">Login First</a></li>
+                        {% endif %}
+
+                        
+
+
+                    </ul>
+
+                </div>
+
+
+                <div class="shoppingbag menubar">
+                    <i class="fa fa-shopping-bag"></i>
+                    <div class="dropdown-content">
+
+                        {% for cat in category %}
+                        <a href="#cat{{cat.cat_id}}" data-toggle="collapse"><b>{{cat.cat_name}}</b><b>+</b></a>
+                        <div id="cat{{cat.cat_id}}" class="collapse">
+                            {% for i in cat.sub_category_set.all %}
+                            <a href="/shop/productview/{{i.sub_cat_id}}" class="dropdown-item ">{{i.sub_cat_name}}</a>
+                            {% endfor %}
+
+                        </div>
+                        {% endfor %}
+
+
+
+                    </div>
+                </div>
+
+
+
+                <div class="searchbar">
+                    <form method="get" action="/shop/search" class="d-flex">
+                        <input class="form-control me-2" style="width: 520px;" type="search" placeholder="Search"
+                            aria-label="Search" name="query" id="query">
+                        <button class="btn" type="submit"><i class="fa fa-search iconbar"></i></button>
+                    </form>
+                </div>
+
+                <div class="indianflag py-2" style="height: 40px; width: 40px;">
+                    <img src="{% static 'shop/images/indianflag.gif'%}" class="img-fluid">
+
+
+                </div>
+
+
+
+
+                <div class="user dropdown dropleft float-right">
+                    <i class="fa fa-user iconbar" data-toggle="dropdown"></i>
+                    <ul class="dropdown-menu">
+                        {% if user.is_authenticated %}
+                        <li>Looged in as {{request.user}}</li>
+                        <li><a href="/shop/logout/" class="dropdown-item text-center">Logout</a></li>
+                        {% else %}
+
+                        <li><a href="#" class="dropdown-item text-center" data-toggle="modal"
+                                data-target="#signupmodal">Signup</a></li>
+                        <li><a href="#" class="dropdown-item text-center" data-toggle="modal"
+                                data-target="#loginmodal">Login</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+
+                <div class="Wishlist">
+                    <i class="fa fa-heart iconbar" data-toggle="dropdown"></i>
+
+                </div>
+
+
+
+
+                <div class="cart">
+                    <i class="fa fa-shopping-cart iconbar" data-toggle="modal" data-target="#mycart"></i>
+                </div>
+
+
+
+                <div class="user dropdown dropleft float-right">
+                    <i class="fa fa-bell iconbar" data-toggle="dropdown"></i>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item">My Notifications</li>
+
+                    </ul>
+
+
+
+                </div>
+
+
+            </div>
+
+        </nav>
+
+        <!-- cart modal -->
+        <div class="modal" id="mycart">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h6 class="modal-title ">My Cart</h6>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body justify-content-center">
+
+                        <div id="cartitem" style="height: 300px;  overflow:auto; ">
+                            <!--
+                            
+
+                                <div class="d-flex justify-content-around align-items-center">
+                                    <div class="cartimage">
+                                        <img style="height: 65px; width: 65px;" class="img-fluid" src="#">
+                                    </div>
+                                    <div class="productdetails">
+                                        <p class=" m-1" style="font-size: 13px;">Name</p>
+                                        <p class=" m-1" style="font-size: 13px;">Brand</p>
+
+                                        <p class=" m-1" style="font-size: 13px;">1kg</p>
+                                        <p class=" m-1" style="font-size: 13px;">1*2</p>
+
+                                    </div>
+                                    <div class="cartdiv">
+                                        <button class="btn btn-primary btn-sm cartminus" id="cartminus">-</button><span
+                                            class="m-1 p-2" id="cartval">0</span><button
+                                            class="btn btn-primary btn-sm cartplus" id="cartplus">+</button>
+                                    </div>
+                                    <div>
+                                        price
+                                    </div>
+                                    <div class="cartremove">
+                                        <button class="btn btn-primary btn-sm" id="remove">remove</button>
+                                    </div>
+
+
+                                </div>
+                                <hr>
+                            
+                            
+
+
+                            <div class="d-flex justify-content-around">
+                                <div>
+                                    <button class="btn btn-primary btn-sm">checkout</button>
+                                </div>
+                                <div>
+                                    <button class="btn btn-primary btn-sm">clear cart</button>
+                                </div>
+                                <div>
+                                    Subtotal Rs.<span style="font-size: 30px;">400</span>
+                                </div>
+                            </div>
+                            -->
+                        </div>
+
+
+                    </div>
+
+                    <!-- Modal footer -->
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- cart modal -->
+
+
+        <!-- SignUp modal -->
+        <div class="modal" id="signupmodal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h6 class="modal-title text-center">Sign Up</h6>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <form action="/shop/signup/" method="post">
+                            {% csrf_token %}
+
+                            <div class="form-group">
+                                <label for="usersname'">User's Name</label>
+                                <input type="text" class="form-control" id="usersname"
+                                    placeholder="Choose your username uniquely" name="usersname" required>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="userfirstname"> First Name:</label>
+                                <input type="text" class="form-control" id="userfirstname"
+                                    placeholder="Enter First Name" name="userfirstname" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="userlastname"> Last Name:</label>
+                                <input type="text" class="form-control" id="userlastname" placeholder="Enter Last Name"
+                                    name="userlastname">
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="email"> Email:</label>
+                                <input type="email" class="form-control" id="useremail" placeholder="Enter Email"
+                                    name="useremail" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="mobileno"> Mobile No.
+                                    :</label>
+                                <input type="text" class="form-control" id="usermobileno" placeholder="Enter Mobile No"
+                                    name="usermobileno" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pwd"> Password:</label>
+                                <input type="password" class="form-control col-md-11" id="userpassword"
+                                    placeholder="Enter password" name="userpassword" required>
+                                <span toggle="#userpassword"
+                                    class="fa fa-fw fa-eye field-icon toggle-password  col-md-1"
+                                    style="color:black; cursor:pointer; margin-left: 430px;  font-size: medium;"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="cpwd"> Confirm Password:</label>
+                                <input type="password" class="form-control" id="usercpwd"
+                                    placeholder="Re enter password" name="userconfirmpassword" required>
+                            </div>
+
+
+
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+
+
+                    <!-- Modal footer -->
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- end Signup modal -->
+
+
+        <!-- Login modal -->
+        <div class="modal" id="loginmodal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h6 class="modal-title text-center">Login</h6>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body justify-content-center">
+                        {% for message in messages %}
+                        <div class="alert alert-{{message.tags }} alert-dismissible fade show" role="alert">
+                            <strong>Message: </strong> {{ message }}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        {% endfor %}
+                        <form action="/shop/login/" method="post">
+                            {% csrf_token %}
+
+
+                            <div class="form-group ">
+                                <label for="loginusername"> User's Name:
+                                    :</label>
+                                <input type="text" class="form-control" id="loginusername" placeholder="Enter User Nmae"
+                                    name="loginusername">
+                            </div>
+
+                            <div class="form-group ">
+                                <label for="pwd"> Password:</label>
+                                <input type="password" class="form-control" id="loginpassword"
+                                    placeholder="Enter password" name="loginpassword">
+                            </div>
+
+
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </form>
+                    </div>
+                    <!-- Modal footer -->
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- end Login modal -->
+
+
+
+    </section>
+
+
+
+
+    <section>
+        <nav>
+            <div class="container-fluid navbar2">
+
+                <div class="logo">
+                    <a href="#"><img src="{% static 'shop/images/Annapurnabazzar.png'%}" class="img-fluid" alt="logo">
+                    </a>
+
+                </div>
+
+
+                <div class="myaccount">
+
+                    <i class="fa fa-user-circle" data-toggle="dropdown"></i>
+                    <ul class="dropdown-menu">
+
+                        {% if user.is_authenticated %}
+                        <li><a href="/shop/useraccount/" class="dropdown-item">My Account</a></li>
+                        <li><a href="/shop/userorder/" class="dropdown-item">My Order</a></li>
+                        
+                        {% else %}
+
+                        
+                        <li><a href="#" class="dropdown-item text-center" data-toggle="modal"
+                                data-target="#loginmodal">Login First</a></li>
+                        {% endif %}
+                    </ul>
+
+                </div>
+
+                
+
+
+                <div class="shoppingbag navbar-icon ">
+                    <i class="fa fa-shopping-bag" data-toggle="dropdown"></i>
+
+                    <ul class="dropdown-menu">
+                        <div style="height: 300px; overflow-y: scroll;">
+                            {% for cat in category %}
+                            <li class="dropdown-header">{{cat.cat_name}}</li>
+                            {% for i in cat.sub_category_set.all %}
+                            <li><a href="/shop/productview/{{i.sub_cat_id}}"
+                                    class="dropdown-item">{{i.sub_cat_name}}</a></li>
+                            {% endfor %}
+                            {% endfor %}
+
+                        </div>
+                    </ul>
+
+                </div>
+
+                <div class="search">
+                    <a href="/shop/bottomsearch/"><i class="fa fa-search"></i></a>
+                </div>
+        
+
+               
+
+                <div class="indianflag py-2" style="height: 40px; width: 40px;">
+                    <img src="{% static 'shop/images/indianflag.gif'%}" class="img-fluid">
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+        </nav>
+
+    </section>
+    <!-- bottom nav bar -->
+    <nav class="navbar fixed-bottom navbar-light bg-light bottomnavbar">
+
+
+        <div class="home">
+            {% if user.is_authenticated %}
+            <a href="/shop/shophome/"><i class="fa fa-home"></i></a>
+            {% else %}
+            <a href="/shop/"><i class="fa fa-home"></i></a>
+            {% endif %}
+        </div>
+
+
+
+
+
+        <div class="user dropup">
+            <i class="fa fa-user" data-toggle="dropdown"></i>
+            <ul class="dropdown-menu">
+                {% if user.is_authenticated %}
+                <li>Looged in as {{request.user}}</li>
+                <li><a href="/shop/logout/" class="dropdown-item text-center">Logout</a></li>
+                {% else %}
+
+                <li><a href="#" class="dropdown-item text-center" data-toggle="modal"
+                        data-target="#signupmodal">Signup</a></li>
+                <li><a href="#" class="dropdown-item text-center" data-toggle="modal"
+                        data-target="#loginmodal">Login</a></li>
+                {% endif %}
+            </ul>
+        </div>
+
+
+        <div class="dropup">
+            <i class="fa fa-bell iconbar" data-toggle="dropdown"></i>
+            <ul class="dropdown-menu">
+                <li class="dropdown-item">My Notifications</li>
+
+            </ul>
+        </div>
+
+
+
+
+        <div class="Wishlist">
+            <i class="fa fa-heart iconbar" data-toggle="dropdown"></i>
+
+        </div>
+
+
+        <div class="cart">
+            <i class="fa fa-shopping-cart" data-toggle="modal" data-target="#mycart"></i>
+        </div>
+
+
+
+    </nav>
+
+    <!-- end bottom nav  bar -->
+    <hr>
+    <!-- products view section  -->
+    {% for message in messages %}
+    <div class="alert alert-{{message.tags }} alert-dismissible fade show" role="alert">
+        <strong>Message: </strong> {{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+
+    <section>
+
+        <div class="container">
+            <div class="d-flex justify-content-around">
+
+
+                <div class="dropdown">
+                    <h6 class="dropdown-toggle" style="cursor: pointer;" data-toggle="dropdown">Sort by</h6>
+                    <div class="dropdown-menu">
+                        <div class="list-group checkbox-list-group">
+                            <!--
+                            <div style="height: 300px; overflow-y: scroll;">
+                                
+                                <div class="dropdown-header">sort by subcategory</div>
+                                <div class="list-group-item"><label>&nbsp;<input type="checkbox"><span
+                                            class="list-group-item-text mx-2">Default</span></label>
+                                </div>
+                                <div class="list-group-item"><label>&nbsp;<input type="checkbox"><span
+                                            class="list-group-item-text"> Success</span></label>
+                                </div>
+                                <div class="list-group-item"><label>&nbsp;<input type="checkbox"><span
+                                            class="list-group-item-text"> Info</span></label>
+                                </div>
+                                <div class="list-group-item"><label>&nbsp;<input type="checkbox"><span
+                                            class="list-group-item-text"> Warning</span></label>
+                                </div>
+                                <div class="list-group-item"><label>&nbsp;<input type="checkbox"><span
+                                            class="list-group-item-text"> Danger</span></label>
+                                </div>
+
+                                <div class="dropdown-header">sort by brand</div>
+                                <div class="list-group-item">&nbsp;<label><input type="checkbox"><span
+                                            class="list-group-item-text"> Default</span></label>
+                                </div>
+                                <div class="list-group-item"><label>&nbsp;<input type="checkbox"><span
+                                            class="list-group-item-text"><i class="fa fa-fw"></i> Success</span></label>
+                                </div>
+                                <div class="list-group-item"><label>&nbsp;<input type="checkbox"><span
+                                            class="list-group-item-text"><i class="fa fa-fw"></i> Info</span></label>
+                                </div>
+                                <div class="list-group-item"><label>&nbsp;<input type="checkbox"><span
+                                            class="list-group-item-text"><i class="fa fa-fw"></i> Warning</span></label>
+                                </div>
+                                <div class="list-group-item"><label>&nbsp;<input type="checkbox"><span
+                                            class="list-group-item-text"><i class="fa fa-fw"></i> Danger</span></label>
+                                </div>
+
+                                <div class="dropdown-header">sort by Packet size</div>
+                                <div class="list-group-item">&nbsp;<label><input type="checkbox"><span
+                                            class="list-group-item-text"><i class="fa fa-fw"></i> Default</span></label>
+                                </div>
+                                <div class="list-group-item"><label>&nbsp;<input type="checkbox"><span
+                                            class="list-group-item-text"><i class="fa fa-fw"></i> Success</span></label>
+                                </div>
+                                <div class="list-group-item"><label>&nbsp;<input type="checkbox"><span
+                                            class="list-group-item-text"><i class="fa fa-fw"></i> Info</span></label>
+                                </div>
+                                <div class="list-group-item"><label>&nbsp;<input type="checkbox"><span
+                                            class="list-group-item-text"><i class="fa fa-fw"></i> Warning</span></label>
+                                </div>
+                                <div class="list-group-item"><label>&nbsp;<input type="checkbox"><span
+                                            class="list-group-item-text"><i class="fa fa-fw"></i> Danger</span></label>
+                                </div>
+
+                                <div class="dropdown-header">sort by Price</div>
+                                <div class="list-group-item">&nbsp;<label><input type="checkbox"><span
+                                            class="list-group-item-text"><i class="fa fa-fw"></i> Default</span></label>
+                                </div>
+                                <div class="list-group-item"><label>&nbsp;<input type="checkbox"><span
+                                            class="list-group-item-text"><i class="fa fa-fw"></i> Success</span></label>
+                                </div>
+                                <div class="list-group-item"><label>&nbsp;<input type="checkbox"><span
+                                            class="list-group-item-text"><i class="fa fa-fw"></i> Info</span></label>
+                                </div>
+                                <div class="list-group-item"><label>&nbsp;<input type="checkbox"><span
+                                            class="list-group-item-text"><i class="fa fa-fw"></i> Warning</span></label>
+                                </div>
+                                <div class="list-group-item"><label><input type="checkbox"><span
+                                            class="list-group-item-text"><i class="fa fa-fw"></i> Danger</span></label>
+                                </div>
+                                
+                            </div>
+                            -->
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h6>{{cat.cat_name}} / {{subcat.sub_cat_name}} </h6>
+                </div>
+
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="container-fluid">
+            <div class="row">
+                <!-- products section -->
+                <div class="col-lg-9 col-md-9 col-sm-11 col-11">
+
+                    <div class="row d-flex justify-content-center mb-3">
+                        {% for prod in prods %}
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-6 p-1  product-card">
+                            <div class="card border-info p-1">
+
+                                <img class="card-img-bottom img-fluid rounded" style="width: 100%;
+                                height: 120px;" src="/media/{{prod.prod_image}}" id="imagepr{{prod.prod_id}}"
+                                    alt="Card image">
+
+                                <div class="card-body py-1 px-1">
+
+                                    <p class="card-title p-1 m-0" id="namepr{{prod.prod_id}}">{{prod.prod_name}}</p>
+                                    <p class="card-title p-1 m-0 " id="brandpr{{prod.prod_id}}">{{prod.prod_brand}}</p>
+                                    <p class="card-title p-1 m-0 " id="sizepr{{prod.prod_id}}">
+                                        {{prod.prod_packet_size}}{{prod.prod_packet_type}}</p>
+                                    <p class="card-title p-1 m-0">Rs.<span
+                                            id="pricepr{{prod.prod_id}}">{{prod.prod_price}}</span></p>
+                                    <span id="divpr{{prod.prod_id}}" class="divpr">
+                                        <button id="pr{{prod.prod_id}}" class="btn btn-primary btn-sm cartt">Add to
+                                            Cart</button>
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        {% endfor %}
+
+
+
+
+
+                    </div>
+
+                </div>
+
+                <!-- category section  -->
+                <div class="col-lg-3 col-md-3 col-sm-11 col-11">
+                    <div class="row  d-flex justify-content-around">
+                        <div style="height:460px; overflow:auto;">
+                            {% for cat in category %}
+                            <div class="col-11 mt-1 dropdown">
+                                <button type="button" class="btn btn-primary dropdown-toggle  mx-1"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    {{cat.cat_name}}
+                                </button>
+                                <ul class="dropdown-menu">
+                                    {% for i in cat.sub_category_set.all %}
+                                    <li><a href="/shop/productview/{{i.sub_cat_id}}"
+                                            class="dropdown-item">{{i.sub_cat_name}}</a></li>
+                                    {% endfor %}
+
+                                </ul>
+
+                            </div>
+                            {% endfor %}
+
+
+
+
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+    <!--end  products view section  -->
+
+    <hr>
+    <!--  bottom section -->
+    <section>
+
+        <div class="container-fluid">
+
+            <div class="row d-flex justify-content-center mb-3">
+
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+
+                    <h6 style="cursor:pointer;" data-toggle="collapse" href="#information" aria-expanded="false"
+                        aria-controls="collapseExample">
+                        Infromation
+                    </h6>
+
+                    <div class="collapse" id="information">
+                        <ul style="list-style: none;">
+                            <li style="text-decoration: none;"><a href="#">About Us</a></li>
+                            <li style="text-decoration: none;"><a href="#">Delivery Information</a></li>
+                            <li style="text-decoration: none;"><a href="#">Privacy Policy</a></li>
+                            <li style="text-decoration: none;"><a href="#">Terms & Conditions</a></li>
+
+                        </ul>
+                    </div>
+
+                </div>
+
+
+
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <h6 style="cursor:pointer;" data-toggle="collapse" href="#myaccount" aria-expanded="false"
+                        aria-controls="collapseExample">
+                        About Us
+                    </h6>
+
+                    <div class="collapse" id="myaccount">
+                        <ul style="list-style: none;">
+                            <li style="text-decoration: none;"><a href="#">About Us</a></li>
+                            <li style="text-decoration: none;"><a href="#">Newsletter</a></li>
+                            <li style="text-decoration: none;"><a href="/shop/contactus">Contact Us</a></li>
+
+
+                        </ul>
+                    </div>
+
+
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <h6 style="cursor:pointer;" data-toggle="collapse" href="#contacts" aria-expanded="false"
+                        aria-controls="collapseExample">
+                        Contacts
+                    </h6>
+
+                    <div class="collapse" id="contacts">
+                        <ul style="list-style: none;">
+                            <li style="text-decoration: none;">600, Annapurna Bazzar</li>
+                            <li style="text-decoration: none;">Custom Balcustta Avenue</li>
+                            <li style="text-decoration: none;">annapurnabazzar@gmail.com</li>
+
+
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <h6 style="cursor:pointer;" data-toggle="collapse" href="#services" aria-expanded="false"
+                        aria-controls="collapseExample">
+                        Services Available at
+                    </h6>
+
+                    <div class="collapse" id="services">
+                        <ul style="list-style: none;">
+                            <li style="text-decoration: none;"><a href="#">Kolkata</a></li>
+                            <li style="text-decoration: none;"><a href="#">Gujrat</a></li>
+                            <li style="text-decoration: none;"><a href="#">Pune</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--end  bottom section -->
+    <hr>
+
+    <section>
+        <div class="container">
+            <hr>
+            <div class="row mb-3">
+                <div class="col-xs-12 col-sm-12 col-md-6">
+                    <div>
+                        <h5 class="text-center">
+                            Follow Us on
+                        </h5>
+                    </div>
+                    <div class="follow">
+                        <div>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                        </div>
+                        <div>
+                            <a href="#"> <i class="fa fa-instagram"></i></a>
+                        </div>
+                        <div>
+                            <a href="#"><i class="fa fa-youtube"></i></a>
+                        </div>
+                        <div>
+                            <a href="#"><i class="fa fa-google"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6">
+                    <div>
+                        <h5 class="text-center">
+                            Download App
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--  end follow section -->
+
+    <!-- footer -->
+
+    <div class="footer container-fluid">
+        <div class=" footer-copyright text-center py-3">© 2021 Copyright:
+            <a href="/shop/"> Annapurna Bazzar</a>
+        </div>
+    </div>
+    <!-- end footer -->
+
+    <script>
+
+        // find out the cart items from cart
+        console.log('Ganesh ji')
+        //cart = {}
+        if (localStorage.getItem('cart') == null) {
+            var cart = {};
+
+        }
+
+        else {
+            cart = JSON.parse(localStorage.getItem('cart'));
+            updateCart(cart)
+
+        }
+
+        // if add to cart button is clicked add/increment the item
+        //$('.cartt').click(function () {
+        $('.divpr').on('click', 'button.cartt', function () {
+
+            console.log('clicked');
+            var idstr = this.id.toString();
+            console.log(idstr)
+
+            if (cart[idstr] != undefined) {
+                cart[idstr][0] = cart[idstr][0] + 1;
+                cart[idstr][5] = cart[idstr][0] * cart[idstr][4]
+
+            }
+            else {
+                qty = 1
+                name = document.getElementById('name' + idstr).innerHTML;
+                image = document.getElementById('image' + idstr).getAttribute('src');
+
+                brand = document.getElementById('brand' + idstr).innerHTML;
+                size = document.getElementById('size' + idstr).innerHTML;
+                q = document.getElementById('price' + idstr).innerHTML;
+                price = parseFloat(q)
+
+
+                sum = qty * price
+
+                cart[idstr] = [qty, name, brand, size, price, sum,image];
+
+            }
+            console.log(cart)
+
+            updateCart(cart)
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+
+
+
+
+        });
+
+        function updateCart(cart) {
+
+
+
+            for (var item in cart) {
+                var ele = document.getElementById('div' + item)
+                if (ele != null) {
+                    document.getElementById('div' + item).innerHTML = "<button id='minus" + item + "' class='btn btn-primary minus btn-sm'>-</button> <span id='val" + item + "''>" + cart[item][0] + "</span> <button id='plus" + item + "' class='btn btn-primary plus  btn-sm'>+</button>";
+                }
+            }
+
+            if ($.isEmptyObject(cart)) {
+                change = 'Your cart is Empty!!! please add some products'
+                $('#cartitem').append(change)
+            }
+
+            else {
+
+                document.getElementById('cartitem').innerHTML = ''
+                subtotal = 0
+                for (var item in cart) {
+                    subtotal = subtotal + cart[item][5]
+
+                    change = `<div class="d-flex justify-content-around align-items-center">
+                                    <div class="cartimage">
+                                        <img style="height: 65px; width: 65px;" class="img-fluid" src="${cart[item][6]}">
+                                    </div>
+                                    <div class="productdetails">
+                                        <p class=" m-1" style="font-size: 13px;">${cart[item][1]}</p>
+                                        <p class=" m-1" style="font-size: 13px;">${cart[item][2]}</p>
+
+                                        <p class=" m-1" style="font-size: 13px;">${cart[item][3]}</p>
+                                        <p class=" m-1" style="font-size: 13px;">${cart[item][0]}*Rs.${cart[item][4]}</p>
+
+                                    </div>
+                                    <div class="cartdiv">
+                                        <button class="btn btn-primary btn-sm cartminus" id="cartminus${item}">-</button><span
+                                            class="m-1 p-2" id="cartval${item}">${cart[item][0]}</span><button
+                                            class="btn btn-primary btn-sm cartplus" id="cartplus${item}">+</button>
+                                    </div>
+                                    <div>
+                                       Rs.${cart[item][5]}
+                                    </div>
+                                    <div class="remove">
+                                        <button class="btn btn-primary btn-sm cartremove" id="cartremove${item}">remove</button>
+                                    </div>
+
+
+                            </div>
+                            <hr>`
+                    $('#cartitem').append(change)
+                }
+
+                change = `
+
+
+
+                <div class="d-flex justify-content-around">
+                  
+                  {% if user.is_authenticated %}
+                  <div> 
+                  <a href="/shop/checkout"><button class="btn btn-primary btn-sm">Checkout</button></a>
+                  </div>
+                  {% else %}
+  
+                  <div>
+                  <a href="#" class="dropdown-item text-center" data-toggle="modal"
+                          data-target="#loginmodal">Login</a>
+                  </div>
+                  <div>
+                      <a href="/shop/checkout"><button class="btn btn-primary btn-sm disabled">Checkout</button></a> </div>
+                  {% endif %}
+                 
+                     
+                     
+                       <div>
+                           <button class="btn btn-primary btn-sm" id="clearcart" onclick="clearCart()">clear cart</button>
+                      </div>
+                  <div>
+                   Subtotal Rs.<span style="font-size: 30px;">${subtotal}</span>
+                </div>
+               </div>`
+
+
+                $('#cartitem').append(change)
+
+            }
+
+            $('.cartdiv').on("click", "button.cartminus", function () {
+                //cart = JSON.parse(localStorage.getItem('cart'));
+                console.log('minus')
+
+                a = this.id.slice(9,);
+                console.log(a)
+
+                if (Object.keys(cart).length == 1 && cart[a][0] == 1) {
+                    delete cart[a]
+                    console.log('hello')
+
+                    var ele = document.getElementById('div' + a)
+                    if (ele != null) {
+                        document.getElementById('div' + a).innerHTML = '<button id="' + a + '" class="btn btn-primary btn-sm cartt">Add toCart</button>';
+                    }
+
+                    //document.getElementById('div' + a).innerHTML = '<button id="' + a + '" class="btn btn-primary btn-sm cartt">Add toCart</button>'
+                    document.getElementById('cartitem').innerHTML = ''
+
+
+
+                }
+
+                else if (cart[a][0] == 1) {
+
+                    delete cart[a]
+
+                    var ele = document.getElementById('div' + a)
+                    if (ele != null) {
+                        document.getElementById('div' + a).innerHTML = '<button id="' + a + '" class="btn btn-primary btn-sm cartt">Add toCart</button>';
+                    }
+
+
+                    //document.getElementById('div' + a).innerHTML = '<button id="' + a + '" class="btn btn-primary btn-sm cartt">Add toCart</button>'
+
+
+                }
+                else {
+
+                    cart[a][0] = cart[a][0] - 1
+                    cart[a][5] = cart[a][0] * cart[a][4]
+
+
+                }
+
+                if (cart[a] != undefined) {
+                    document.getElementById('cartval' + a).innerHTML = cart[a][0]
+
+                }
+                console.log(cart)
+                updateCart(cart)
+
+
+            });
+
+            $('.cartdiv').on("click", "button.cartplus", function () {
+                console.log('plus')
+
+                a = this.id.slice(8,);
+                cart[a][0] = cart[a][0] + 1
+                cart[a][5] = cart[a][0] * cart[a][4]
+                document.getElementById('cartval' + a).innerHTML = cart[a][0]
+
+                console.log(cart)
+                updateCart(cart)
+
+
+            });
+
+            $('.remove').on("click", "button.cartremove", function () {
+
+                console.log('remove')
+                a = this.id.slice(10,);
+                if (Object.keys(cart).length == 1 && cart[a][0] == 1) {
+                    delete cart[a]
+                    console.log('hello')
+
+                    var ele = document.getElementById('div' + a)
+                    if (ele != null) {
+                        console.log('hello')
+                        document.getElementById('div' + a).innerHTML = '<button id="' + a + '" class="btn btn-primary btn-sm cartt">Add to Cart</button>';
+                    }
+
+
+
+                    //document.getElementById('div' + a).innerHTML = '<button id="' + a + '" class="btn btn-primary btn-sm cartt">Add toCart</button>'
+                    document.getElementById('cartitem').innerHTML = ''
+                }
+                else {
+                    delete cart[a]
+
+                    var ele = document.getElementById('div' + a)
+                    if (ele != null) {
+                        document.getElementById('div' + a).innerHTML = '<button id="' + a + '" class="btn btn-primary btn-sm cartt">Add toCart</button>';
+                    }
+
+
+                    //document.getElementById('div' + a).innerHTML = '<button id="' + a + '" class="btn btn-primary btn-sm cartt">Add toCart</button>'
+                }
+
+                updateCart(cart)
+
+
+
+            });
+
+
+
+
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+
+        $('.divpr').on("click", "button.minus", function () {
+            console.log('minus')
+            a = this.id.slice(7,);
+            //cart['pr' + a] = Math.max(0, cart['pr' + a])
+            if (cart['pr' + a][0] == 1) {
+
+                delete cart['pr' + a]
+
+                document.getElementById('divpr' + a).innerHTML = '<button id="pr' + a + '" class="btn btn-primary btn-sm cartt">Add toCart</button>'
+
+            }
+            else {
+
+                cart['pr' + a][0] = cart['pr' + a][0] - 1
+                cart['pr' + a][5] = cart['pr' + a][0] * cart['pr' + a][4]
+
+            }
+
+            if (cart['pr' + a] != undefined) {
+                document.getElementById('valpr' + a).innerHTML = cart['pr' + a][0]
+            }
+            console.log(cart)
+            updateCart(cart)
+
+        });
+
+
+        $('.divpr').on("click", "button.plus", function () {
+            console.log('plus')
+
+            a = this.id.slice(6,);
+
+            cart['pr' + a][0] = cart['pr' + a][0] + 1
+            cart['pr' + a][5] = cart['pr' + a][0] * cart['pr' + a][4]
+            document.getElementById('valpr' + a).innerHTML = cart['pr' + a][0]
+
+            console.log(cart)
+            updateCart(cart)
+
+        });
+
+
+
+        //cart = JSON.parse(localStorage.getItem('cart'));
+
+
+
+        function clearCart() {
+
+            cart = JSON.parse(localStorage.getItem('cart'));
+
+            for (var item in cart) {
+                console.log(item)
+
+                var ele = document.getElementById('div' + item)
+                if (ele != null) {
+                    document.getElementById('div' + item).innerHTML = '<button id="' + item + '" class="btn btn-primary btn-sm cartt">Add toCart</button>'
+                }
+            }
+
+
+
+            localStorage.clear()
+            cart = {};
+            if ($.isEmptyObject(cart)) {
+                document.getElementById('cartitem').innerHTML = ''
+                change = 'Your cart is Empty!!! please add some products'
+                $('#cartitem').append(change)
+            }
+
+
+
+        };
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

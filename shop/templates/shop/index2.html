@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <title>index</title>
+    {%load static%}
+      <link rel="stylesheet" href="{% static 'shop/css/annapurnabazzarstyle.css' %}">
+    <style>
+        /*
+        body {
+            background-color: lightblue;
+        }
+
+        * {
+            line-height: 90%;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .navbar1 {
+
+            display: flex;
+            justify-content: space-around;
+            background-color: #060469;
+            align-items: center;
+
+        }
+
+        .navbar2 {
+            display: none;
+        }
+
+        .bottomnavbar {
+            visibility: hidden;
+        }
+
+        .logo {
+            margin-top: 5px;
+
+            width: 180px;
+            height: 50px;
+        }
+
+
+        .fa {
+
+            font-size: x-large;
+            color: rgb(53 180 240);
+            cursor: pointer;
+        }
+
+        .cart {
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .cart::after {
+
+            display: block;
+        }
+
+        .user {
+            text-align: center;
+        }
+
+        .user::after {
+
+
+            display: block;
+        }
+
+        .shoppingbag {
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .shoppingbag::after {
+            cursor: pointer;
+            content: "Items";
+            display: block;
+        }
+
+
+
+        .menubar {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+
+            overflow: scroll;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .menubar:hover .dropdown-content {
+            display: block;
+        }
+
+        .menubar:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+
+        li {
+
+            list-style: none;
+
+        }
+
+        li a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+
+        }*/
+
+        /* slider */
+
+        /*
+        .slider-img-responsive {
+
+            width: 100%;
+            height: 400px;
+        }
+        */
+
+        /* footer */
+        /*
+        .footer {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background-color: #060469;
+            color: rgb(231, 216, 76);
+        }
+
+        .footer a {
+            text-decoration: none;
+            color: rgb(231, 216, 76);
+        }
+
+        .follow {
+            display: flex;
+            justify-content: space-around;
+        }
+
+
+
+
+
+
+
+        @media only screen and (max-width: 600px) {
+            body {
+                background-color: rgb(220, 231, 235);
+
+            }
+
+            .navbar1 {
+                display: none;
+            }
+
+
+            .navbar2 {
+                background-color: #060469;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+            }
+
+            .logo {
+                margin-top: 10px;
+
+                width: 150px;
+                height: 50px;
+            }
+
+            .menubar {
+                position: relative;
+                display: inline-block;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f1f1f1;
+                min-width: 160px;
+                overflow: auto;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+            }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+            .dropdown a:hover {
+                background-color: #ddd;
+            }
+
+            .show {
+                display: block;
+            }
+
+
+
+            .bottomnavbar {
+                visibility: visible;
+
+                background-color: #060469;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+            }*/
+
+        /* .bottomnavbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+            }*/
+        /*
+            .fa {
+
+                font-size: x-large;
+                color: rgb(53 180 240);
+            }
+
+            .home {
+                text-align: center;
+            }
+*/
+        /*
+            .home::after {
+
+                display: block;
+            }
+
+            .search {
+                text-align: center;
+            }
+
+            .search::after {
+
+                display: block;
+            }
+
+            .cart {
+                text-align: center;
+
+            }
+
+            .cart::after {
+
+                display: block;
+            }
+
+            .user {
+                text-align: center;
+            }
+
+            .user::after {
+
+
+                display: block;
+            }
+
+            .shoppingbag {
+                text-align: center;
+            }
+
+            .shoppingbag::after {
+
+                display: block;
+            }
+
+            .slider-img-responsive {
+
+                width: 100%;
+                height: 150px;
+            }
+
+            .footer {
+                margin-top: 10px;
+                ;
+                margin-bottom: 55px;
+                background-color: #060469;
+                color: rgb(231, 216, 76);
+            }
+
+
+
+
+
+        }
+        */
+    </style>
+</head>
+
+<body>
+    <section>
+        <nav>
+            <div class="container-fluid navbar1">
+
+                <div class="logo">
+                    <a href="#"><img src="Annapurnabazzar.png" class="img-fluid" alt="image"> </a>
+                </div>
+
+
+                <div class="shoppingbag menubar">
+                    <i class="fa fa-shopping-bag"></i>
+                    <div class="dropdown-content">
+                        {% for cat in category %}
+                        <a href="#prod{{cat.cat_id}}" data-toggle="collapse"><b>{{cat.cat_name}}</b><b>+</b></a>
+                        <div id="prod{{cat.cat_id}}" class="collapse">
+                            {% for i in cat.sub_category_set.all %}
+                            <a href="/shop/productview2/{{i.sub_cat_id}}" class="dropdown-item ">{{i.sub_cat_name}}</a>
+                            {% endfor %}
+
+                        </div>
+                        {% endfor %}
+
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+
+
+
+                <div class="searchbar">
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn" type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+
+                <div class="cart">
+                    <i class="fa fa-shopping-cart" data-toggle="modal" data-target="#mycart"></i>
+                </div>
+
+                <div class="user dropdown dropleft float-right">
+                    <i class="fa fa-user" data-toggle="dropdown"></i>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" class="dropdown-item text-center" data-toggle="modal"
+                                data-target="#signupmodal">Signup</a></li>
+                        <li><a href="#" class="dropdown-item text-center" data-toggle="modal"
+                                data-target="#loginmodal">Login</a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+        </nav>
+
+        <!-- cart modal -->
+        <div class="modal" id="mycart">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h6 class="modal-title ">My Cart</h6>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body justify-content-center">
+                        items
+                    </div>
+
+                    <!-- Modal footer -->
+
+
+                </div>
+            </div>
+        </div>
+
+        </div>
+        <!-- cart modal -->
+
+
+        <!-- SignUp modal -->
+        <div class="modal" id="signupmodal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h6 class="modal-title text-center">Sign Up</h6>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <form action="#">
+                            <div class="form-group">
+                                <label for="username"><i class="fa fa-user" style="font-size:20px"></i> User's
+                                    Name:</label>
+                                <input type="text" class="form-control" id="useremail" placeholder="Enter Name"
+                                    name="username">
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="fa fa-envelope" style="font-size:20px"></i> Email:</label>
+                                <input type="email" class="form-control" id="emailid" placeholder="Enter Email"
+                                    name="emailid">
+                            </div>
+                            <div class="form-group">
+                                <label for="mobileno"><i class="fa fa-mobile" style="font-size:30px"></i> Mobile No.
+                                    :</label>
+                                <input type="text" class="form-control" id="mobileno" placeholder="Enter Mobile No"
+                                    name="mobileno">
+                            </div>
+                            <div class="form-group">
+                                <label for="city">City :</label>
+                                <input type="text" class="form-control" id="city" placeholder="Enter City" name="city">
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd"><i class="fa fa-lock" style="font-size:24px"></i> Password:</label>
+                                <input type="password" class="form-control" id="password" placeholder="Enter password"
+                                    name="password">
+                            </div>
+                            <div class="form-group">
+                                <label for="cpwd"><i class="fa fa-lock" style="font-size:24px"></i> Confirm
+                                    Password:</label>
+                                <input type="password" class="form-control" id="cpwd" placeholder="Re enter password"
+                                    name="cpassword">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+
+                    <!-- Modal footer -->
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- end Signup modal -->
+
+
+        <!-- Login modal -->
+        <div class="modal" id="loginmodal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h6 class="modal-title text-center">Login</h6>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body justify-content-center">
+                        <form action="#">
+
+
+                            <div class="form-group">
+                                <label for="mobileno"><i class="fa fa-mobile" style="font-size:30px"></i> Mobile No.
+                                    :</label>
+                                <input type="text" class="form-control" id="loginmobileno" placeholder="Enter Mobile No"
+                                    name="mobileno">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pwd"><i class="fa fa-lock" style="font-size:24px"></i> Password:</label>
+                                <input type="password" class="form-control" id="loginpassword" placeholder="Enter password"
+                                    name="password">
+                            </div>
+
+
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </form>
+                    </div>
+
+                    <!-- Modal footer -->
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- end Login modal -->
+
+
+
+    </section>
+
+
+
+
+    <section>
+        <nav>
+            <div class="container-fluid navbar2">
+
+                <div class="logo">
+                    <a href="#"><img src="Annapurnabazzar.png" class="img-fluid" alt="image"> </a>
+
+                </div>
+
+
+                <div class="shoppingbag navbar-icon ">
+                    <i class="fa fa-shopping-bag" data-toggle="dropdown"></i>
+
+                    <ul class="dropdown-menu">
+                        <div style="height: 300px; overflow-y: scroll;">
+                            {% for cat in category %}
+                            <li class="dropdown-header">{{cat.cat_name}}</li>
+                            {% for i in cat.sub_category_set.all %}
+                            <li><a href="/shop/productview2/{{i.sub_cat_id}}" class="dropdown-item">{{i.sub_cat_name}}</a></li>
+                            {% endfor %}
+                            {% endfor %}
+
+                        </div>
+                    </ul>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+                <div>Item</div>
+
+
+            </div>
+
+        </nav>
+
+    </section>
+    <!-- bottom nav bar -->
+    <nav class="navbar fixed-bottom navbar-light bg-light bottomnavbar">
+
+
+        <div class="home">
+            <a href="#"><i class="fa fa-home"></i></a>
+        </div>
+
+
+
+
+
+        <div class="user dropup">
+            <i class="fa fa-user" data-toggle="dropdown"></i>
+            <ul class="dropdown-menu">
+                <li><a href="#" class="dropdown-item text-center" data-toggle="modal"
+                        data-target="#signupmodal">Signup</a></li>
+                <li><a href="#" class="dropdown-item text-center" data-toggle="modal"
+                        data-target="#loginmodal">Login</a></li>
+            </ul>
+        </div>
+
+
+
+
+        <div class="search">
+            <a href="#"><i class="fa fa-search"></i></a>
+        </div>
+
+        <div class="cart">
+            <i class="fa fa-shopping-cart" data-toggle="modal" data-target="#mycart"></i>
+        </div>
+
+
+
+    </nav>
+
+    <!-- end bottom nav  bar -->
+
+    <!-- slider bar -->
+
+    <div class="container-fluid my-2">
+
+        <div id="demo" class="carousel slide" data-ride="carousel">
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images\sliderimage1.png" class="d-block img-fluid slider-img-responsive"
+                        alt="Los Angeles">
+                    <div class="carousel-caption">
+                        <h3>Los Angeles</h3>
+                        <p>We had such a great time in LA!</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/sliderimage2.png" class="d-block img-fluid slider-img-responsive" alt="Chicago">
+                    <div class="carousel-caption">
+                        <h3>Chicago</h3>
+                        <p>Thank you, Chicago!</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/sliderimage3.png" class="d-block img-fluid slider-img-responsive" alt="New York">
+                    <div class="carousel-caption">
+                        <h3>New York</h3>
+                        <p>We love the Big Apple!</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+
+
+    </div>
+
+    <!-- end slider bar -->
+
+
+    <!-- top categories -->
+    <hr>
+    <section>
+        <div class="container">
+            <div>
+                <h4 class="text-center">Top Categories</h4>
+            </div>
+            <hr>
+            <div class="row  d-flex justify-content-center mb-3">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-5 p-1 mt-3">
+                    <div class="card border-info p-1">
+
+                        <div class="card-body py-1">
+                            <h6 class="card-title text-center">Groceries</h6>
+
+                        </div>
+                        <a href="#">
+                            <img class="card-img-bottom img-fluid rounded" style="width: 100%;
+                                height: 100px;" src="images/th1.jpg" alt="Card image">
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-sm-4 col-5 p-1 mt-3">
+                    <div class="card border-info  p-1">
+
+                        <div class="card-body py-1 ">
+                            <h6 class="card-title text-center">Groceries</h6>
+
+                        </div>
+                        <a href="#">
+                            <img class="card-img-bottom img-fluid rounded" style="width: 100%;
+                                height: 100px;" src="images/th1.jpg" alt="Card image">
+                        </a>
+
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-5 p-1 mt-3">
+                    <div class="card border-info p-1">
+
+                        <div class="card-body py-1">
+                            <h6 class="card-title text-center">Groceries</h6>
+
+                        </div>
+                        <a href="#">
+                            <img class="card-img-bottom img-fluid rounded" style="width: 100%;
+                                height: 100px;" src="images/th1.jpg" alt="Card image">
+                        </a>
+
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-5 p-1 mt-3">
+                    <div class="card border-info p-1">
+
+                        <div class="card-body py-1">
+                            <h6 class="card-title text-center">Groceries</h6>
+
+                        </div>
+                        <a href="#">
+                            <img class="card-img-bottom img-fluid rounded" style="width: 100%;
+                                height: 100px;" src="images/th1.jpg" alt="Card image">
+                        </a>
+
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-5 p-1 mt-3">
+                    <div class="card border-info p-1">
+
+                        <div class="card-body py-1">
+                            <h6 class="card-title text-center">Groceries</h6>
+
+                        </div>
+                        <a href="#">
+                            <img class="card-img-bottom img-fluid rounded" style="width: 100%;
+                                height: 100px;" src="images/th1.jpg" alt="Card image">
+                        </a>
+
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-4 col-5 p-1 mt-3">
+                    <div class="card border-info p-1">
+
+                        <div class="card-body py-1">
+                            <h6 class="card-title text-center">Groceries</h6>
+
+                        </div>
+                        <a href="#">
+
+                            <img class="card-img-bottom img-fluid rounded" style="width: 100%;
+                                height: 100px;" src="images/th1.jpg" alt="Card image">
+
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- end top categories -->
+    <hr>
+
+    <!-- shop by categories -->
+
+    <section>
+        <div class="container">
+            <div>
+                <h4 class="text-center">Shop by Categories</h4>
+            </div>
+            <hr>
+
+            <div class="row p-1 d-flex justify-content-center">
+                <div class="col-lg-2 col-md-2 col-sm-3 col-5 p-1 mt-1 dropdown">
+                    <button type="button" class="btn btn-info dropdown-toggle btn-sm  mx-1" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Groceries
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Rice</a></li>
+                        <li><a class="dropdown-item" href="#">Pulse</a></li>
+                        <li><a class="dropdown-item" href="#">Salt</a></li>
+
+                        <li> <a class="dropdown-item" href="#">Sugar</a></li>
+                    </ul>
+                </div>
+
+
+
+                <div class="col-lg-2 col-md-2 col-sm-3 col-5 p-1 mt-1 dropdown">
+                    <button type="button" class="btn btn-info dropdown-toggle btn-sm  mx-1" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Beverages
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Coca cola</a></li>
+                        <li><a class="dropdown-item" href="#">coffee</a></li>
+                        <li><a class="dropdown-item" href="#">Tea</a></li>
+
+                        <li><a class="dropdown-item" href="#">Link4</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-2 col-sm-3 col-5 p-1 mt-1 dropdown">
+                    <button type="button" class="btn btn-info dropdown-toggle btn-sm   mx-1" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Beverages
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Coca cola</a></li>
+                        <li><a class="dropdown-item" href="#">coffee</a></li>
+                        <li><a class="dropdown-item" href="#">Tea</a></li>
+
+                        <li><a class="dropdown-item" href="#">Link4</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-2 col-sm-3 col-5 p-1 mt-1 dropdown">
+                    <button type="button" class="btn btn-info dropdown-toggle btn-sm   mx-1" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Beverages
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Coca cola</a></li>
+                        <li><a class="dropdown-item" href="#">coffee</a></li>
+                        <li><a class="dropdown-item" href="#">Tea</a></li>
+
+                        <li><a class="dropdown-item" href="#">Link4</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-2 col-sm-3 col-5 p-1 mt-1 dropdown">
+                    <button type="button" class="btn btn-info dropdown-toggle btn-sm  mx-1" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Beverages
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Coca cola</a></li>
+                        <li><a class="dropdown-item" href="#">coffee</a></li>
+                        <li><a class="dropdown-item" href="#">Tea</a></li>
+
+                        <li><a class="dropdown-item" href="#">Link4</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-2 col-sm-3 col-5 p-1 mt-1 dropdown">
+                    <button type="button" class="btn btn-info dropdown-toggle btn-sm  mx-1" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Beverages
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Coca cola</a></li>
+                        <li><a class="dropdown-item" href="#">coffee</a></li>
+                        <li><a class="dropdown-item" href="#">Tea</a></li>
+
+                        <li><a class="dropdown-item" href="#">Link4</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-2 col-sm-3 col-5 p-1 mt-1 dropdown">
+                    <button type="button" class="btn btn-info dropdown-toggle btn-sm  mx-1" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Beverages
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Link1</a></li>
+                        <li><a class="dropdown-item" href="#">Link2</a></li>
+                        <li><a class="dropdown-item" href="#">Link3</a></li>
+
+                        <li><a class="dropdown-item" href="#">Link4</a></li>
+                    </ul>
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+    </section>
+
+    <hr>
+    <!-- end shop by categories -->
+
+
+
+
+
+    <!-- new Arrival -->
+    <section>
+
+        <div class="container">
+            <div>
+                <h4 class="text-center">New Arrival</h4>
+            </div>
+            <hr>
+
+            <div class="row  d-flex justify-content-center mb-3">
+                <div class="col-lg-2 col-md-3 col-sm-6 col-5 p-1 mt-3">
+                    <div class="card border-info p-1">
+
+                        <div class="card-body py-1">
+                            <h6 class="card-title text-center">Groceries</h6>
+
+                        </div>
+                        <a href="#">
+                            <img class="card-img-bottom img-fluid rounded" style="width: 100%;
+                                height: 120px;" src="images/th1.jpg" alt="Card image">
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-sm-6 col-5 p-1 mt-3">
+                    <div class="card border-info p-1">
+
+                        <div class="card-body py-1">
+                            <h6 class="card-title text-center">Groceries</h6>
+
+                        </div>
+                        <a href="#">
+                            <img class="card-img-bottom img-fluid rounded" style="width: 100%;
+                                height: 120px;" src="images/th1.jpg" alt="Card image">
+                        </a>
+
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6 col-5 p-1 mt-3">
+                    <div class="card border-info p-1">
+
+                        <div class="card-body py-1">
+                            <h6 class="card-title text-center">Groceries</h6>
+
+                        </div>
+                        <a href="#">
+                            <img class="card-img-bottom img-fluid rounded" style="width: 100%;
+                                height: 120px;" src="images/th1.jpg" alt="Card image">
+                        </a>
+
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6 col-5 p-1 mt-3">
+                    <div class="card border-info p-1">
+
+                        <div class="card-body py-1">
+                            <h6 class="card-title text-center">Groceries</h6>
+
+                        </div>
+                        <a href="#">
+                            <img class="card-img-bottom img-fluid rounded" style="width: 100%;
+                                height: 120px;" src="images/th1.jpg" alt="Card image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--end  new arrival -->
+
+    <hr>
+    <!--Shop Fast -->
+
+    <section>
+
+        <div class="container">
+            <div>
+                <h4 class="text-center">Shop Fast</h4>
+            </div>
+            <hr>
+
+            <div class="row  d-flex justify-content-center mb-3">
+                <div class="col-lg-3 col-md-3 col-sm-5 p-1 col-5 mt-3">
+                    <div class="card border-info p-1">
+
+                        <img class="card-img-bottom img-fluid rounded" style="width: 100%;
+                        height: 120px;" src="images/th1.jpg" alt="Card image">
+
+                        <div class="card-body py-1">
+
+                            <p class="card-title ">Arhar Dal</p>
+                            <p class="card-title ">Saloni</p>
+                            <p class="card-title ">Packet Size: <b> 1kg</b></p>
+                            <p class="card-title ">Price: <b>Rs.78</b></p>
+                            <a href="#" class="btn btn-primary btn-sm">Add to Cart</a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-5 col-5 p-1 mt-3">
+                    <div class="card border-info p-1">
+
+                        <img class="card-img-bottom img-fluid rounded" style="width: 100%;
+                        height: 120px;" src="images/th1.jpg" alt="Card image">
+
+                        <div class="card-body py-1">
+
+                            <p class="card-title ">Arhar Dal</p>
+                            <p class="card-title ">Saloni</p>
+                            <p class="card-title ">Packet Size: <b> 1kg</b></p>
+                            <p class="card-title ">Price: <b>Rs.78</b></p>
+                            <a href="#" class="btn btn-primary btn-sm">Add to Cart</a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-5 col-5 p-1 mt-3">
+                    <div class="card border-info p-1">
+
+                        <img class="card-img-bottom img-fluid rounded" style="width: 100%;
+                        height: 120px;" src="images/th1.jpg" alt="Card image">
+
+                        <div class="card-body py-1">
+
+                            <p class="card-title ">Arhar Dal</p>
+                            <p class="card-title ">Saloni</p>
+                            <p class="card-title ">Packet Size: <b> 1kg</b></p>
+                            <p class="card-title ">Price: <b>Rs.78</b></p>
+                            <a href="#" class="btn btn-primary btn-sm">Add to Cart</a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-5 col-5 p-1 mt-1 mt-3">
+                    <div class="card border-info p-1">
+
+                        <img class="card-img-bottom img-fluid rounded" style="width: 100%;
+                        height: 120px;" src="images/th1.jpg" alt="Card image">
+
+                        <div class="card-body py-1">
+
+                            <p class="card-title ">Arhar Dal</p>
+                            <p class="card-title ">Saloni</p>
+                            <p class="card-title ">Packet Size: <b> 1kg</b></p>
+                            <p class="card-title ">Price: <b>Rs.78</b></p>
+                            <a href="#" class="btn btn-primary btn-sm"><span style="font:13px;">Add to Cart</span></a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+    </section>
+
+
+
+    <!-- end Shop Fast -->
+
+    <hr>
+    <!--  bottom section -->
+    <section>
+
+        <div class="container">
+
+            <div class="row d-flex justify-content-center mb-3">
+
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+
+                    <h6 style="cursor:pointer;" data-toggle="collapse" href="#information" aria-expanded="false"
+                        aria-controls="collapseExample">
+                        Infromation
+                    </h6>
+
+                    <div class="collapse" id="information">
+                        <ul style="list-style: none;">
+                            <li style="text-decoration: none;"><a href="#">About Us</a></li>
+                            <li style="text-decoration: none;"><a href="#">Delivery Information</a></li>
+                            <li style="text-decoration: none;"><a href="#">Privacy Policy</a></li>
+                            <li style="text-decoration: none;"><a href="#">Terms & Conditions</a></li>
+
+                        </ul>
+                    </div>
+
+                </div>
+
+
+
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <h6 style="cursor:pointer;" data-toggle="collapse" href="#myaccount" aria-expanded="false"
+                        aria-controls="collapseExample">
+                        My Account
+                    </h6>
+
+                    <div class="collapse" id="myaccount">
+                        <ul style="list-style: none;">
+                            <li style="text-decoration: none;"><a href="#">About Us</a></li>
+                            <li style="text-decoration: none;"><a href="#">Newsletter</a></li>
+                            <li style="text-decoration: none;"><a href="#">Contact Us</a></li>
+
+
+                        </ul>
+                    </div>
+
+
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <h6 style="cursor:pointer;" data-toggle="collapse" href="#contacts" aria-expanded="false"
+                        aria-controls="collapseExample">
+                        Contacts
+                    </h6>
+
+                    <div class="collapse" id="contacts">
+                        <ul style="list-style: none;">
+                            <li style="text-decoration: none;">600, Annapurna Bazzar</li>
+                            <li style="text-decoration: none;">Custom Balcustta Avenue</li>
+                            <li style="text-decoration: none;">annapurnabazzar@gmail.com</li>
+
+
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <h6 style="cursor:pointer;" data-toggle="collapse" href="#services" aria-expanded="false"
+                        aria-controls="collapseExample">
+                        Services Available at
+                    </h6>
+
+                    <div class="collapse" id="services">
+                        <ul style="list-style: none;">
+                            <li style="text-decoration: none;"><a href="#">Kolkata</a></li>
+                            <li style="text-decoration: none;"><a href="#">Gujrat</a></li>
+                            <li style="text-decoration: none;"><a href="#">Pune</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--end  bottom section -->
+    <hr>
+    <!--  follow section -->
+    <section>
+        <div class="container">
+            <hr>
+            <div class="row mb-3">
+                <div class="col-xs-12 col-sm-12 col-md-6">
+                    <div>
+                        <h5 class="text-center">
+                            Follow Us on
+                        </h5>
+                    </div>
+                    <div class="follow">
+                        <div>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                        </div>
+                        <div>
+                            <a href="#"> <i class="fa fa-instagram"></i></a>
+                        </div>
+                        <div>
+                            <a href="#"><i class="fa fa-youtube"></i></a>
+                        </div>
+                        <div>
+                            <a href="#"><i class="fa fa-google"></i></a>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6">
+                    <div>
+                        <h5 class="text-center">
+                            Download App
+                        </h5>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+
+        </div>
+
+
+    </section>
+
+    <!--  end follow section -->
+
+
+
+
+
+
+
+
+
+    <!-- footer -->
+
+    <div class="footer container-fluid">
+        <div class=" footer-copyright text-center py-3">© 2021 Copyright:
+            <a href="#"> Annapurna Bazzar</a>
+        </div>
+    </div>
+    <!-- end footer -->
+
+
+
+
+
+</body>
+
+</html>

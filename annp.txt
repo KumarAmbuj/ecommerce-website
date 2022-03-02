@@ -1,0 +1,16 @@
+    if (settingRoot != null && settingRoot.isStatus() &&
+                                settingRoot.getData() != null) {
+
+                            sessionManager.saveSetting(settingRoot.getData());
+                            Const.setCurrency1(settingRoot.getData().getCurrencies());
+                            Const.setMaxQuantity(settingRoot.getData().getMaxQuantity());
+
+                            if (!sessionManager.getBooleanValue(Const.IS_LOGIN)) {
+                                initFirebaseMessage();
+                            } else {
+
+                                startActivity(new Intent(this, MainActivity.class));
+                            }
+
+                    } else {
+                      

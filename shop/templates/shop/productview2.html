@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <title>productview</title>
+    {%load static%}
+      <link rel="stylesheet" href="{% static 'shop/css/annapurnabazzarstyle.css' %}">
+    <style>
+        /*
+        body {
+            background-color: lightblue;
+        }
+
+        * {
+            line-height: 90%;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .navbar1 {
+
+            display: flex;
+            justify-content: space-around;
+            background-color: #060469;
+            align-items: center;
+
+        }
+
+        .navbar2 {
+            display: none;
+        }
+
+        .bottomnavbar {
+            visibility: hidden;
+        }
+
+        .logo {
+            margin-top: 5px;
+
+            width: 180px;
+            height: 50px;
+        }
+*/
+/*
+        .fa {
+
+            font-size: x-large;
+            color: rgb(53 180 240);
+            cursor: pointer;
+        }
+
+        .cart {
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .cart::after {
+
+            display: block;
+        }
+
+        .user {
+            text-align: center;
+        }
+
+        .user::after {
+
+
+            display: block;
+        }
+
+        .shoppingbag {
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .shoppingbag::after {
+            cursor: pointer;
+            content: "Items";
+            display: block;
+        }
+
+
+
+        .menubar {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+
+            overflow: scroll;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .menubar:hover .dropdown-content {
+            display: block;
+        }
+
+        .menubar:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+
+        li {
+
+            list-style: none;
+
+        }
+
+        li a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+
+        }
+*/
+        /* slider */
+/*
+        .slider-img-responsive {
+
+            width: 100%;
+            height: 400px;
+        }
+
+*/
+        /* footer */
+ /*
+        .footer {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background-color: #060469;
+            color: rgb(231, 216, 76);
+        }
+
+        .footer a {
+            text-decoration: none;
+            color: rgb(231, 216, 76);
+        }
+
+        .follow {
+            display: flex;
+            justify-content: space-around;
+        }
+
+
+
+
+
+
+
+        @media only screen and (max-width: 600px) {
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            body {
+                background-color: rgb(220, 231, 235);
+
+            }
+
+
+            .navbar1 {
+                display: none;
+            }
+
+
+            .navbar2 {
+                background-color: #060469;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+            }
+
+            .logo {
+                margin-top: 10px;
+
+                width: 150px;
+                height: 50px;
+            }
+
+            .menubar {
+                position: relative;
+                display: inline-block;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f1f1f1;
+                min-width: 160px;
+                overflow: auto;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+            }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+            .dropdown a:hover {
+                background-color: #ddd;
+            }
+
+            .show {
+                display: block;
+            }
+
+
+
+            .bottomnavbar {
+                visibility: visible;
+
+                background-color: #060469;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+            }
+
+            /* .bottomnavbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+            }*/
+/*
+            .fa {
+
+                font-size: x-large;
+                color: rgb(53 180 240);
+            }
+
+            .home {
+                text-align: center;
+            }
+
+            .home::after {
+
+                display: block;
+            }
+
+            .search {
+                text-align: center;
+            }
+
+            .search::after {
+
+                display: block;
+            }
+
+            .cart {
+                text-align: center;
+
+            }
+
+            .cart::after {
+
+                display: block;
+            }
+
+            .user {
+                text-align: center;
+            }
+
+            .user::after {
+
+
+                display: block;
+            }
+
+            .shoppingbag {
+                text-align: center;
+            }
+
+            .shoppingbag::after {
+
+                display: block;
+            }
+
+            .slider-img-responsive {
+
+                width: 100%;
+                height: 150px;
+            }
+
+            .footer {
+                margin-top: 10px;
+                ;
+                margin-bottom: 55px;
+                background-color: #060469;
+                color: rgb(231, 216, 76);
+            }
+
+
+
+
+
+        }*/
+    </style>
+</head>
+
+<body>
+    <section>
+        <nav>
+            <div class="container-fluid navbar1">
+
+                <div class="logo">
+                    <a href="#"><img src="images/Annapurnabazzar.png" class="img-fluid" alt="image"> </a>
+                </div>
+
+
+                <div class="shoppingbag menubar">
+                    <i class="fa fa-shopping-bag"></i>
+                    <div class="dropdown-content">
+                        <a href="#groceries" data-toggle="collapse">Groceries</a>
+                        <div id="groceries" class="collapse">
+                            <a href="index.html" class="dropdown-item ">link4</a>
+                            <a href="#" class="dropdown-item text-center">link4</a>
+                            <a href="google.com" class="dropdown-item text-center">link4</a>
+
+                        </div>
+
+                        <a href="#beverages" data-toggle="collapse">Beverages</a>
+                        <div id="beverages" class="collapse">
+                            <a href="cards.html" class="dropdown-item ">link7</a>
+                            <a href="#" class="dropdown-item text-center">link8</a>
+                            <a href="google.com" class="dropdown-item text-center">link9</a>
+                            <a href="google.com" class="dropdown-item text-center">link9</a>
+
+                        </div>
+
+                        <a href="#snacks" data-toggle="collapse">Snacks</a>
+                        <div id="snacks" class="collapse">
+                            <a href="index.html" class="dropdown-item ">link4</a>
+                            <a href="#" class="dropdown-item text-center">link4</a>
+                            <a href="google.com" class="dropdown-item text-center">link4</a>
+
+                        </div>
+
+
+
+
+
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+
+
+
+                <div class="searchbar">
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn" type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+
+                <div class="cart">
+                    <i class="fa fa-shopping-cart" data-toggle="modal" data-target="#mycart"></i>
+                </div>
+
+                <div class="user dropdown dropleft float-right">
+                    <i class="fa fa-user" data-toggle="dropdown"></i>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" class="dropdown-item text-center" data-toggle="modal"
+                                data-target="#signupmodal">Signup</a></li>
+                        <li><a href="#" class="dropdown-item text-center" data-toggle="modal"
+                                data-target="#loginmodal">Login</a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+        </nav>
+
+        <!-- cart modal -->
+        <div class="modal" id="mycart">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h6 class="modal-title ">My Cart</h6>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body justify-content-center">
+                        items
+                    </div>
+
+                    <!-- Modal footer -->
+
+
+                </div>
+            </div>
+        </div>
+
+        </div>
+        <!-- cart modal -->
+
+
+        <!-- SignUp modal -->
+        <div class="modal" id="signupmodal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h6 class="modal-title text-center">Sign Up</h6>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <form action="#">
+                            <div class="form-group">
+                                <label for="username"><i class="fa fa-user" style="font-size:20px"></i> User's
+                                    Name:</label>
+                                <input type="text" class="form-control" id="useremail" placeholder="Enter Name"
+                                    name="username">
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="fa fa-envelope" style="font-size:20px"></i> Email:</label>
+                                <input type="email" class="form-control" id="emailid" placeholder="Enter Email"
+                                    name="emailid">
+                            </div>
+                            <div class="form-group">
+                                <label for="mobileno"><i class="fa fa-mobile" style="font-size:30px"></i> Mobile No.
+                                    :</label>
+                                <input type="text" class="form-control" id="mobileno" placeholder="Enter Mobile No"
+                                    name="mobileno">
+                            </div>
+                            <div class="form-group">
+                                <label for="city">City :</label>
+                                <input type="text" class="form-control" id="city" placeholder="Enter City" name="city">
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd"><i class="fa fa-lock" style="font-size:24px"></i> Password:</label>
+                                <input type="password" class="form-control" id="password" placeholder="Enter password"
+                                    name="password">
+                            </div>
+                            <div class="form-group">
+                                <label for="cpwd"><i class="fa fa-lock" style="font-size:24px"></i> Confirm
+                                    Password:</label>
+                                <input type="password" class="form-control" id="cpwd" placeholder="Re enter password"
+                                    name="cpassword">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+
+                    <!-- Modal footer -->
+
+
+
+                </div>
+            </div>
+        </div>
+
+        </div>
+        <!-- end Signup modal -->
+
+
+        <!-- Login modal -->
+        <div class="modal" id="loginmodal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h6 class="modal-title text-center">Login</h6>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body justify-content-center">
+                        <form action="#">
+
+
+                            <div class="form-group">
+                                <label for="mobileno"><i class="fa fa-mobile" style="font-size:30px"></i> Mobile No.
+                                    :</label>
+                                <input type="text" class="form-control" id="mobileno" placeholder="Enter Mobile No"
+                                    name="mobileno">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pwd"><i class="fa fa-lock" style="font-size:24px"></i> Password:</label>
+                                <input type="password" class="form-control" id="password" placeholder="Enter password"
+                                    name="password">
+                            </div>
+
+
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </form>
+                    </div>
+
+                    <!-- Modal footer -->
+
+
+                </div>
+            </div>
+        </div>
+
+        </div>
+        <!-- end Login modal -->
+
+
+
+    </section>
+
+
+
+
+    <section>
+        <nav>
+            <div class="container-fluid navbar2">
+
+                <div class="logo">
+                    <a href="#"><img src="Annapurnabazzar.png" class="img-fluid" alt="image"> </a>
+
+                </div>
+
+
+                <div class="shoppingbag navbar-icon ">
+                    <i class="fa fa-shopping-bag" data-toggle="dropdown"></i>
+
+                    <ul class="dropdown-menu">
+                        <div style="height: 500px; overflow-y: scroll;">
+                            <li class="dropdown-header">Groceries</li>
+                            <li><a href="#" class="dropdown-item">Salt</a></li>
+                            <li><a href="#" class="dropdown-item">Sugar</a></li>
+                            <li class="dropdown-header">Beverages</li>
+                            <li><a href="#" class="dropdown-item">Coca Cola</a></li>
+                            <li><a href="#" class="dropdown-item">Pepsi</a></li>
+                            <li class="dropdown-header">Groceries</li>
+                            <li><a href="#" class="dropdown-item">Salt</a></li>
+                            <li><a href="#" class="dropdown-item">Sugar</a></li>
+                            <li class="dropdown-header">Beverages</li>
+                            <li><a href="#" class="dropdown-item">Coca Cola</a></li>
+                            <li><a href="#" class="dropdown-item">Pepsi</a></li>
+                            <li class="dropdown-header">Groceries</li>
+                            <li><a href="#" class="dropdown-item">Salt</a></li>
+                            <li><a href="#" class="dropdown-item">Sugar</a></li>
+                            <li class="dropdown-header">Beverages</li>
+                            <li><a href="#" class="dropdown-item">Coca Cola</a></li>
+                            <li><a href="#" class="dropdown-item">Pepsi</a></li>
+                            <li class="dropdown-header">Groceries</li>
+                            <li><a href="#" class="dropdown-item">Salt</a></li>
+                            <li><a href="#" class="dropdown-item">Sugar</a></li>
+                            <li class="dropdown-header">Beverages</li>
+                            <li><a href="#" class="dropdown-item">Coca Cola</a></li>
+                            <li><a href="#" class="dropdown-item">Pepsi</a></li>
+                            <li class="dropdown-header">Groceries</li>
+                            <li><a href="#" class="dropdown-item">Salt</a></li>
+                            <li><a href="#" class="dropdown-item">Sugar</a></li>
+                            <li class="dropdown-header">Beverages</li>
+                            <li><a href="#" class="dropdown-item">Coca Cola</a></li>
+                            <li><a href="#" class="dropdown-item">Pepsi</a></li>
+                            <li class="dropdown-header">Groceries</li>
+                            <li><a href="#" class="dropdown-item">Salt</a></li>
+                            <li><a href="#" class="dropdown-item">Sugar</a></li>
+                            <li class="dropdown-header">Beverages</li>
+                            <li><a href="#" class="dropdown-item">Coca Cola</a></li>
+                            <li><a href="#" class="dropdown-item">Pepsi</a></li>
+                            <li class="dropdown-header">Groceries</li>
+                            <li><a href="#" class="dropdown-item">Salt</a></li>
+                            <li><a href="#" class="dropdown-item">Sugar</a></li>
+                            <li class="dropdown-header">Beverages</li>
+                            <li><a href="#" class="dropdown-item">Coca Cola</a></li>
+                            <li><a href="#" class="dropdown-item">Pepsi</a></li>
+                        </div>
+                    </ul>
+
+                </div>
+
+                <div>Item</div>
+
+
+            </div>
+
+        </nav>
+
+    </section>
+    <!-- bottom nav bar -->
+    <nav class="navbar fixed-bottom navbar-light bg-light bottomnavbar">
+
+
+        <div class="home">
+            <a href="#"><i class="fa fa-home"></i></a>
+        </div>
+
+
+
+
+
+        <div class="user dropup">
+            <i class="fa fa-user" data-toggle="dropdown"></i>
+            <ul class="dropdown-menu">
+                <li><a href="#" class="dropdown-item text-center" data-toggle="modal"
+                        data-target="#signupmodal">Signup</a></li>
+                <li><a href="#" class="dropdown-item text-center" data-toggle="modal"
+                        data-target="#loginmodal">Login</a></li>
+            </ul>
+        </div>
+
+
+
+
+        <div class="search">
+            <a href="#"><i class="fa fa-search"></i></a>
+        </div>
+
+        <div class="cart">
+            <i class="fa fa-shopping-cart" data-toggle="modal" data-target="#mycart"></i>
+        </div>
+
+
+
+    </nav>
+
+    <!-- end bottom nav  bar -->
+    <hr>
+    <!-- products view section  -->
+
+    <section>
+
+        <div class="container">
+            <div class="d-flex justify-content-around">
+
+
+                <div class="dropdown">
+                    <h6 class="dropdown-toggle" style="cursor: pointer;" data-toggle="dropdown">Sort by</h6>
+                    <div class="dropdown-menu">
+                        <div class="list-group checkbox-list-group">
+                            <div style="height: 300px; overflow-y: scroll;">
+                                <div class="dropdown-header">sort by subcategory</div>
+                                <div class="list-group-item">&nbsp;<label><input type="checkbox"><span
+                                            class="list-group-item-text"><i class="fa fa-fw"></i> Default</span></label>
+                                </div>
+                                <div class="list-group-item"><label>&nbsp;<input type="checkbox"><span
+                                            class="list-group-item-text"><i class="fa fa-fw"></i> Success</span></label>
+                                </div>
+                                <div class="list-group-item"><label>&nbsp;<input type="checkbox"><span
+                                            class="list-group-item-text"><i class="fa fa-fw"></i> Info</span></label>
+                                </div>
+                                <div class="list-group-item"><label>&nbsp;<input type="checkbox"><span
+                                            class="list-group-item-text"><i class="fa fa-fw"></i> Warning</span></label>
+                                </div>
+                                <div class="list-group-item"><label>&nbsp;<input type="checkbox"><span
+                                            class="list-group-item-text"><i class="fa fa-fw"></i> Danger</span></label>
+                                </div>
+
+                                <div class="dropdown-header">sort by brand</div>
+                                <div class="list-group-item">&nbsp;<label><input type="checkbox"><span
+                                            class="list-group-item-text"><i class="fa fa-fw"></i> Default</span></label>
+                                </div>
+                                <div class="list-group-item"><label>&nbsp;<input type="checkbox"><span
+                                            class="list-group-item-text"><i class="fa fa-fw"></i> Success</span></label>
+                                </div>
+                                <div class="list-group-item"><label>&nbsp;<input type="checkbox"><span
+                                            class="list-group-item-text"><i class="fa fa-fw"></i> Info</span></label>
+                                </div>
+                                <div class="list-group-item"><label>&nbsp;<input type="checkbox"><span
+                                            class="list-group-item-text"><i class="fa fa-fw"></i> Warning</span></label>
+                                </div>
+                                <div class="list-group-item"><label>&nbsp;<input type="checkbox"><span
+                                            class="list-group-item-text"><i class="fa fa-fw"></i> Danger</span></label>
+                                </div>
+
+                                <div class="dropdown-header">sort by Packet size</div>
+                                <div class="list-group-item">&nbsp;<label><input type="checkbox"><span
+                                            class="list-group-item-text"><i class="fa fa-fw"></i> Default</span></label>
+                                </div>
+                                <div class="list-group-item"><label>&nbsp;<input type="checkbox"><span
+                                            class="list-group-item-text"><i class="fa fa-fw"></i> Success</span></label>
+                                </div>
+                                <div class="list-group-item"><label>&nbsp;<input type="checkbox"><span
+                                            class="list-group-item-text"><i class="fa fa-fw"></i> Info</span></label>
+                                </div>
+                                <div class="list-group-item"><label>&nbsp;<input type="checkbox"><span
+                                            class="list-group-item-text"><i class="fa fa-fw"></i> Warning</span></label>
+                                </div>
+                                <div class="list-group-item"><label>&nbsp;<input type="checkbox"><span
+                                            class="list-group-item-text"><i class="fa fa-fw"></i> Danger</span></label>
+                                </div>
+
+                                <div class="dropdown-header">sort by Price</div>
+                                <div class="list-group-item">&nbsp;<label><input type="checkbox"><span
+                                            class="list-group-item-text"><i class="fa fa-fw"></i> Default</span></label>
+                                </div>
+                                <div class="list-group-item"><label>&nbsp;<input type="checkbox"><span
+                                            class="list-group-item-text"><i class="fa fa-fw"></i> Success</span></label>
+                                </div>
+                                <div class="list-group-item"><label>&nbsp;<input type="checkbox"><span
+                                            class="list-group-item-text"><i class="fa fa-fw"></i> Info</span></label>
+                                </div>
+                                <div class="list-group-item"><label>&nbsp;<input type="checkbox"><span
+                                            class="list-group-item-text"><i class="fa fa-fw"></i> Warning</span></label>
+                                </div>
+                                <div class="list-group-item"><label><input type="checkbox"><span
+                                            class="list-group-item-text"><i class="fa fa-fw"></i> Danger</span></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h6>Grocery / Pulse</h6>
+                </div>
+
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="container">
+            <div class="row" >
+                <!-- products section -->
+                <div class="col-lg-9 col-md-8 col-sm-11 col-11">
+
+                    <div class="row d-flex justify-content-center mb-3">
+                        {% for prod in prods %}
+                        <div class="col-lg-3 col-md-4 col-sm-4 col-6 p-1  product-card">
+                            <div class="card border-info p-1">
+
+                                <img class="card-img-bottom img-fluid rounded" style="width: 100%;
+                                height: 120px;" src="/media/{{prod.prod_image}}" alt="Card image">
+
+                                <div class="card-body py-1 px-1">
+
+                                    <p class="card-title p-1 m-0">{{prod.prod_name}}</p>
+                                    <p class="card-title p-1 m-0 ">{{prod.prod_brand}}</p>
+                                    <p class="card-title p-1 m-0 "> <b> {{prod.prod_packet_size}}{{prod.prod_packet_type}}</b></p>
+                                    <p class="card-title p-1 m-0">Price: <b>Rs.{{prod.prod_mrp}}</b></p>
+                                    <a href="#" class="btn btn-primary btn-sm">Add to Cart</a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        {% endfor %}
+
+
+
+
+
+
+
+
+                    </div>
+
+                </div>
+
+                <!-- category section  -->
+                <div class="col-lg-3 col-md-4 col-sm-11 col-11">
+                    <div class="row  d-flex justify-content-around">
+                        <div class="col-11 mt-1 dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle  mx-1" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Beverages
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Link1</a></li>
+                                <li><a class="dropdown-item" href="#">coffee</a></li>
+                                <li><a class="dropdown-item" href="#">Tea</a></li>
+
+                                <li><a class="dropdown-item" href="#">Link4</a></li>
+                            </ul>
+
+                        </div>
+
+                        <div class="col-11 mt-1 dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle  mx-1" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Beverages
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Coca cola</a></li>
+                                <li><a class="dropdown-item" href="#">coffee</a></li>
+                                <li><a class="dropdown-item" href="#">Tea</a></li>
+
+                                <li><a class="dropdown-item" href="#">Link4</a></li>
+                            </ul>
+
+                        </div>
+
+                        <div class="col-11 mt-1 dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle  mx-1" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Beverages
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Coca cola</a></li>
+                                <li><a class="dropdown-item" href="#">coffee</a></li>
+                                <li><a class="dropdown-item" href="#">Tea</a></li>
+
+                                <li><a class="dropdown-item" href="#">Link4</a></li>
+                            </ul>
+
+                        </div>
+
+                        <div class="col-11 mt-1 dropdown">
+                            <button type="button" class="btn btn-primary dropdown-toggle  mx-1" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Beverages
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Coca cola</a></li>
+                                <li><a class="dropdown-item" href="#">coffee</a></li>
+                                <li><a class="dropdown-item" href="#">Tea</a></li>
+
+                                <li><a class="dropdown-item" href="#">Link4</a></li>
+                            </ul>
+
+                        </div>
+
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    </section>
+
+
+
+
+    <!--end  products view section  -->
+
+
+
+
+
+
+
+
+
+
+
+    <!--  follow section -->
+    <section>
+        <div class="container">
+            <hr>
+            <div class="row mb-3">
+                <div class="col-xs-12 col-sm-12 col-md-6">
+                    <div>
+                        <h5 class="text-center">
+                            Follow Us on
+                        </h5>
+                    </div>
+                    <div class="follow">
+                        <div>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                        </div>
+                        <div>
+                            <a href="#"> <i class="fa fa-instagram"></i></a>
+                        </div>
+                        <div>
+                            <a href="#"><i class="fa fa-youtube"></i></a>
+                        </div>
+                        <div>
+                            <a href="#"><i class="fa fa-google"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6">
+                    <div>
+                        <h5 class="text-center">
+                            Download App
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--  end follow section -->
+
+    <!-- footer -->
+
+    <div class="footer container-fluid">
+        <div class=" footer-copyright text-center py-3">© 2021 Copyright:
+            <a href="#"> Annapurna Bazzar</a>
+        </div>
+    </div>
+    <!-- end footer -->
+
+</body>
+
+</html>
